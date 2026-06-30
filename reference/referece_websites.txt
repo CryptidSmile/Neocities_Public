@@ -1,0 +1,13 @@
+<Neocities - status cafe reference>
+https://ne0nbandit.art/home
+
+Status Cafe Workaround
+https://maphren.neocities.org/blog/posts/19-05-2024-surfing-waves-rss-guide
+
+    Status Cafe Code Backup
+        <div id="statuscafe">
+        <div id="statuscafe-username">
+        </div>
+        <div id="statuscafe-content">
+        </div>
+        </div>

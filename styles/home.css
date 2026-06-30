@@ -1,0 +1,93 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body{
+  background-image: url("/assets/images/home_background.png");
+  font-family: You;
+  font-size: 2em;
+}
+
+@font-face{
+  font-family: You;
+  src: url("/assets/fonts/youmurdererbb_reg.ttf");
+}
+
+.title {
+  font-size: 150px;
+  font-weight: 600;
+  margin: 20px;
+  text-align: center;
+  font-family: You;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container p{
+  text-align: center;
+}
+
+.webgraph{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.no-dots{
+  text-align: center;
+  list-style-type: none;
+  padding: 0px;
+}
+
+.no-dots li{
+  margin-top:24px;
+}
+
+a:link{
+  color: black;
+  text-decoration: none;
+}
+a:visited{
+  color: black;
+}
+.no-dots a:hover{
+  color: red;
+}
+
+.interests{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 400px;
+}
+
+img{
+  width: 80px;
+  height: auto;
+} 
+.mainpic{
+  width: 350px;
+  height: auto;
+}
+.pagelay{
+  display: flex;
+  flex-direction: row;
+  width: 1697px;
+  margin: auto;
+  gap: 52px;
+}
+.interestpic{
+  width: 150px;
+  height: auto;
+}
+
+.right-img{
+  margin-left: 30px;
+}

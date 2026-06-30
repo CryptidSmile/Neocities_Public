@@ -1,0 +1,10 @@
+body{
+  font-family: You;
+  font-size: 2em;
+  background-image: url("/assets/images/sticky_note.webp");
+}
+
+@font-face{
+  font-family: You;
+  src: url("/assets/fonts/youmurdererbb_reg.ttf");
+}
