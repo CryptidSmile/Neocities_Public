@@ -26,9 +26,9 @@ var knocksound = new Audio('assets/door-knock-sound.mp3');
 door.addEventListener("dblclick", ()=> {
     knocksound.play(console.log("knocking sound"));
     // delay
-    setTimeout(()=> {console.log("door open delay"), imgDoor.style.backgroundImage = "url('/assets/images/open door.png')"}, 3000);
+    setTimeout(()=> {console.log("door open delay"), imgDoor.style.backgroundImage = "url('/assets/images/open door.png')"}, 1000);
     // delay 
-    setTimeout(()=> {window.location.href = "/pages/home.html";}, 700);
+    setTimeout(()=> {window.location.href = "/pages/home.html";}, 1300);
 });
 
  
