@@ -4,6 +4,8 @@ body {
   font-family: You;
   zoom: 1.12;
   font-size: 2em;
+/*  cursor: none; */
+  margin: 0px;
 }
 
 @font-face{
@@ -55,7 +57,7 @@ a:visited{
   gap: 52px;
 }
 
-
-/* 숙제
-nav style 고치기
-*/
+#cursor{
+  width: 20px;
+  height: auto;
+}
