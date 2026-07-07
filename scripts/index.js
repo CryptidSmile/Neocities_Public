@@ -1,3 +1,6 @@
+// This is index.js file
+
+
 console.log('index.js loaded');
 
 function button() {
