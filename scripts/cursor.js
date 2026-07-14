@@ -7,7 +7,6 @@ document.addEventListener("mousemove", (event) => { // mouse 움직일때마다
 
 
 
-
     mouse_cursor.style.top = event.clientY + "px";
     mouse_cursor.style.left = event.clientX + "px";
     console.log(getComputedStyle(mouse_cursor).position);

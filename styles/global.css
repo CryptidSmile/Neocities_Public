@@ -2,7 +2,7 @@ body {
   background-color: white;
   color: black;
   font-family: You;
-  zoom: 1.12;
+  /* zoom: 1.12; */
   font-size: 2em;
 /*  cursor: none; */
   margin: 0px;
@@ -70,4 +70,5 @@ a:visited{
   width: 20px;
   height: auto;
   position: fixed;
+  transform: translate(-50%, -50%);
 }
