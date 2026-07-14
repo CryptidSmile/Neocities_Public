@@ -1,11 +1,12 @@
 body{
     background-image: url("/assets/images/wallpaper.webp");
     background-size: cover;
+    min-height: 100vh;
     color: black;
     font-family: Verdana;
-    /* zoom: 1.12; */
     background-repeat: no-repeat;
 }
+/* what it means to give only one size to the background image. what is the vh option */
 
 .hello{
     color: red;
