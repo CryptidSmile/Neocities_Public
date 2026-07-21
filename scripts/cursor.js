@@ -1,5 +1,5 @@
 // javascript
-// mouse가 될 요소 불러오기
+// Makes the custom cursor display where the original mouse pointer is.
 
 
 const mouse_cursor = document.querySelector("#cursor"); // cursor image

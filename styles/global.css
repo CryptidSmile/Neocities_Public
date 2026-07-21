@@ -77,3 +77,10 @@ a:visited{
 a {
   cursor: none;
 }
+
+.footprint {
+  width: 20px;
+  height: auto;
+  position: fixed;
+  left: 500px;
+}
