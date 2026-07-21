@@ -15,6 +15,7 @@ let lastShoeX = null; // shoe x
 let lastShoeY = null; // shoe y
 
 document.addEventListener("mousemove", (event) => {
+
     const x = event.clientX;
     const y = event.clientY;
 
@@ -27,6 +28,13 @@ document.addEventListener("mousemove", (event) => {
     document.body.appendChild(shoe);
 
 
-    // dx, dy 계산
+    // 발자국이 마우스가 어느정도 움직였을때만 발자국이 찍히는거만
+    // Math sqrt
+
+    // 찍은 발자국 삭제
+    setTimeout(()=> {shoe.remove()}, 4000);
+
+
+    // 마우스마지막 위치를 저장해둔다.
 
 });
