@@ -10,8 +10,18 @@ let lastY = null; // mouse y
 let lastShoeX = null; // shoe x
 let lastShoeY = null; // shoe y
 
+// 내가 알고싶은거 변수
+let isLeftFoot = false;
+// isLeftFoot = !isleftFoot;
+
 // "어느정도거리" 움직였을때 찍고싶은데?
 const STEP = 30;
+
+
+// atan2
+
+// let angleResultRadian = atan2결과 (radian) => (degree)
+// angleResultDegree = angleResultRadian * (180 / Math.PI)
 
 document.addEventListener("mousemove", (event) => {
 
@@ -30,30 +40,50 @@ document.addEventListener("mousemove", (event) => {
     let dx = x - lastX;
     let dy = y - lastY;
     let dist = Math.sqrt(dx * dx + dy * dy);
+    let deg = Math.atan2(dy, dx) * (180/Math.PI) + 90;
 
     if (dist < STEP) return;
 
     // Creates and adds the shoe into the page.
     const shoe = document.createElement("img");
-    shoe.src = "/assets/images/leftshoeprint.png";
+    shoe.src = "/assets/images/leftshoeprint.png"; // 검토, right foot print
     shoe.classList.add("footprint")
     shoe.style.top = y + "px";
     shoe.style.left = x + "px";    
+    shoe.style.rotate = deg + "deg"; 
+    if(!isLeftFoot) {
+        shoe.style.transform = 'scaleX(-1)'; // flip horizontally
+        //shoe.style.left = 
+    }
+
     document.body.appendChild(shoe);     
+
+
     
     // 찍은 발자국 삭제
-    setTimeout(()=> {shoe.remove()}, 4000);
+    setTimeout(()=> {shoe.remove()}, 300);
 
     lastX = x;
     lastY = y;
+
+    isLeftFoot = !isLeftFoot;
 
 });
 
 // github 
 
+// transform: scaleX(-1);
+// element.style.transform = 'scaleX(-1)';
 
 // isLeftFoot True/False, 1,0 변수 활용 1
 // image - Scale (이미지를 좌우 반전 시켜주는 함수, 스타일)
+
+// 
+
+
+
+
+
 
 // next steps
 // 발자국 방향(각도) - 삼각함수 sin cos tan, 두점사이의 방향(벡터) atan2 
