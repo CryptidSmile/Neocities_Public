@@ -79,8 +79,21 @@ a {
 }
 
 .footprint {
-  width: 20px;
+  width: 30px;
   height: auto;
   position: fixed;
   left: 500px;
+  animation-name: footFade;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  translate: -50% -50%; 
+}
+
+
+
+@keyframes footFade {
+  0% {opacity: 1;}
+  30% {opacity: 0.9}
+  65% {opacity: 0.7}
+  100% {opacity: 0;}
 }

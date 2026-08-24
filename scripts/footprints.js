@@ -15,7 +15,10 @@ let isLeftFoot = false;
 // isLeftFoot = !isleftFoot;
 
 // "어느정도거리" 움직였을때 찍고싶은데?
-const STEP = 30;
+const STEP = 45;
+// 좌우 발 간격
+const DIST = 10;
+
 
 
 // atan2
@@ -40,20 +43,26 @@ document.addEventListener("mousemove", (event) => {
     let dx = x - lastX;
     let dy = y - lastY;
     let dist = Math.sqrt(dx * dx + dy * dy);
-    let deg = Math.atan2(dy, dx) * (180/Math.PI) + 90;
+    let deg = Math.atan2(dy, dx) * (180/Math.PI) + 90; // mouse방향
 
     if (dist < STEP) return;
 
+    // 내가 가는 방향
+    let angle = deg * (Math.PI/180);
+    //let side = right일때는 DIST만큼 움직이고, left일때는 -DIST만큼
+    let side = isLeftFoot ? DIST : -DIST
+    let px = x + (side*Math.cos(angle))
+    let py = y + (side*Math.sin(angle))
+
     // Creates and adds the shoe into the page.
     const shoe = document.createElement("img");
-    shoe.src = "/assets/images/leftshoeprint.png"; // 검토, right foot print
+    shoe.src = "/assets/images/rightshoeprint.png"; // 검토, right foot print
     shoe.classList.add("footprint")
-    shoe.style.top = y + "px";
-    shoe.style.left = x + "px";    
+    shoe.style.top = py + "px";
+    shoe.style.left = px + "px";    
     shoe.style.rotate = deg + "deg"; 
     if(!isLeftFoot) {
         shoe.style.transform = 'scaleX(-1)'; // flip horizontally
-        //shoe.style.left = 
     }
 
     document.body.appendChild(shoe);     
@@ -61,7 +70,8 @@ document.addEventListener("mousemove", (event) => {
 
     
     // 찍은 발자국 삭제
-    setTimeout(()=> {shoe.remove()}, 300);
+    setTimeout(()=> {
+        shoe.remove()}, 4000);
 
     lastX = x;
     lastY = y;
