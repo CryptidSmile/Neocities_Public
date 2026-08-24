@@ -79,7 +79,7 @@ img{
 .pagelay{
   display: flex;
   flex-direction: row;
-  width: 1697px;
+  max-width: 1697px;
   margin: auto;
   gap: 52px;
 }
