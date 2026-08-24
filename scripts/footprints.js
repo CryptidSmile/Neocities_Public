@@ -15,9 +15,9 @@ let isLeftFoot = false;
 // isLeftFoot = !isleftFoot;
 
 // "어느정도거리" 움직였을때 찍고싶은데?
-const STEP = 45;
+const STEP = 65;
 // 좌우 발 간격
-const DIST = 10;
+const DIST = 8;
 
 
 

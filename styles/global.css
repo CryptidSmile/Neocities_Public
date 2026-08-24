@@ -1,5 +1,7 @@
 body {
   background-color: white;
+  background-size: cover;
+  min-height: 100vh;
   color: black;
   font-family: You;
   /* zoom: 1.12; */
